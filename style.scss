@@ -1,0 +1,62 @@
+@mixin box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+}
+
+body{
+    background: rgb(231, 163, 17);
+}
+
+nav{
+    @include box();
+    background: white;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 36px;
+}
+
+.learn{
+    @include box();
+    background: black;
+    padding: 30px;
+    color: white;
+    font-size: 24px;
+    line-height: 2em;
+
+    .sp{
+        color: black;
+        padding: 10px;
+        padding-bottom: 0;
+        margin: 0 10px;
+        border-bottom: 2px solid white;
+
+        &:hover{
+            background: white;
+        }
+    }
+
+    h5{
+        color: gray;
+    }
+
+    .code{
+        width: 1000px;
+        margin: 10px 70px;
+        padding: 20px;
+        background: white;
+        border: 2px solid gray;
+        color: black;
+        letter-spacing: 0.4em;
+    }
+
+    grid-template-columns: repeat();
+}
+
