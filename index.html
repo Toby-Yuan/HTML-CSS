@@ -34,6 +34,71 @@
         </div>
 
         <h5>功能表</h5>
+        <h4>功能表分為兩種，黑點的是<span class="sp"><span><</span>ul<span>></span></span>，數字的是<span class="sp"><span><</span>ol<span>></span></span>。</h4>
+        <div class="code">
+            <code><span><</span>ul<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>li<span>></span>項目一<span><</span>/li<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>li<span>></span>項目二<span><</span>/li<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>li<span>></span>項目三<span><</span>/li<span>></span><br>
+                <span><</span>/ul<span>></span></code>
+        </div>
+
+        <h5>圖片</h5>
+        <h4>圖片的標籤為<span class="sp"><span><</span>img<span>></span></span>，而這個標籤沒有結束標籤。</h4>
+        <h4>利用標籤屬性<span class="sp">src</span>可以告知圖片位置，<span class="sp">alt</span>則是圖片載入失敗時顯示的文字。</h4>
+        <div class="code">
+            <code><span><</span>img src="url." alt="text"<span>></span></code>
+        </div>
+        
+        <h5>連結</h5>
+        <h4><span class="sp"><span><</span>a<span>></span></span>為連結標籤，其中<span class="sp">href</span>屬性表示連結目標，加入<span class="sp">target="_blank"</span>可以開新分頁。</h4>
+        <div class="code">
+            <code><span><</span>a href="url." target="_blank"<span>></span>可放任何東西表示點擊位置<span><</span>/a<span>></span></code>
+        </div>
+
+        <h5>表格</h5>
+        <h4>表格比較複雜，我們先看程式碼。</h4>
+        <div class="code">
+            <code>
+                <span><</span>table<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>caption<span>></span>標題<span><</span>/caption<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>tr<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>th<span>></span>欄位名1<span><</span>/th<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>th<span>></span>欄位名2<span><</span>/th<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>th<span>></span>欄位名3<span><</span>/th<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>/tr<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>tr<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>td<span>></span>1-1<span><</span>/td<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>td<span>></span>1-2<span><</span>/td<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>td<span>></span>1-3<span><</span>/td<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>/tr<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>tr<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>td<span>></span>2-1<span><</span>/td<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>td<span>></span>2-2<span><</span>/td<span>></span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><</span>td<span>></span>2-3<span><</span>/td<span>></span><br>
+                &nbsp;&nbsp;&nbsp;<span><</span>/tr<span>></span><br>
+                <span><</span>/table<span>></span>
+            </code>
+        </div>
+        <h4>呈現的效果如下</h4>
+        <table border="2px solid white">
+            <caption>標題</caption>
+            <tr>
+                <th>欄位名1</th>
+                <th>欄位名2</th>
+                <th>欄位名3</th>
+            </tr>
+            <tr>
+                <td>1-1</td>
+                <td>1-2</td>
+                <td>1-3</td>
+            </tr>
+            <tr>
+                <td>2-1</td>
+                <td>2-2</td>
+                <td>2-3</td>
+            </tr>
+        </table>
     </section>
 </body>
 </html>
