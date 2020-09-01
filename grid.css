@@ -1,0 +1,22 @@
+#box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 1200px;
+  height: 300px;
+}
+
+#box div:nth-child(1) {
+  background: red;
+}
+
+#box div:nth-child(2) {
+  background: blue;
+}
+
+#box div:nth-child(3) {
+  background: green;
+}
+/*# sourceMappingURL=grid.css.map */

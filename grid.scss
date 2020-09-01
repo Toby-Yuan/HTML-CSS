@@ -1,0 +1,23 @@
+#box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 1200px;
+    height: 300px;
+
+
+    div{
+
+        &:nth-child(1){
+            background: red;
+        }
+
+        &:nth-child(2){
+            background: blue;
+        }
+
+        &:nth-child(3){
+            background: green;
+        }
+    }
+}
