@@ -6,7 +6,7 @@ var app = new Vue({
     }
 })
 
-// 顯示hover上去的提示
+// 顯示title
 var app2 = new Vue({
     el: '#app-2',
     data: {
