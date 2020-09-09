@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity .5s
+        }
+
+        .fade-enter, .fade-leave-active {
+            opacity: 0
+        }
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <!-- v-bind是控制標籤屬性, 可以簡寫成 :title (依照預控制屬性名稱) -->
+    <div id="app-2">
+        <span v-bind:title="message">
+          Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+
+    <!-- vue的if的控制元件可以放在標籤屬性裡面 -->
+    <div id="app-3">
+        <p v-if="seen">Now you see me</p>
+    </div>
+
+    <!-- vue迴圈 -->
+    <div id="app-4">
+        <ol>
+          <li v-for="todo in todos">
+            {{ todo.text }}
+          </li>
+        </ol>
+    </div>
+
+    <div id="app-41">
+        <ol>
+          <li v-for="member in members">
+            {{ member }}
+          </li>
+        </ol>
+    </div>
+
+    <!-- event DOM啟動 -->
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <!-- 輸入框 -->
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <!-- 自定義標籤 -->
+    <div id="app-7">
+        <ol>
+          <!-- Now we provide each todo-item with the todo object    -->
+          <!-- it's representing, so that its content can be dynamic -->
+          <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+
+    <!-- event動畫 -->
+    <div id="demo">
+        <button v-on:click="show = !show">
+          Toggle
+        </button>
+        <transition name="fade">
+          <p v-if="show">hello</p>
+        </transition>
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="./vue.js"></script>
+</body>
+</html>
