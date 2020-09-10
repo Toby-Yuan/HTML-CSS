@@ -135,6 +135,8 @@ var app12 = new Vue({
       },
       arrayClass: [],
       styleObject: {
+        width: '300px',
+        height: '300px',
         backgroundColor: 'red',
         borderWidth: '5px'
       },
@@ -145,4 +147,62 @@ var app12 = new Vue({
         userSelect: 'none'
       }
     },
+  });
+
+  var app13 = new Vue({
+    el: '#app-13',
+    data: {
+      arrayData: [
+        {
+          name: '小明',
+          age: 16
+        },
+        {
+          name: '漂亮阿姨',
+          age: 24
+        },
+        {
+          name: '杰倫',
+          age: 20
+        }
+      ],
+      objectData: {
+        ming: {
+          name: '小明',
+          age: 16
+        },
+        auntie: {
+          name: '漂亮阿姨',
+          age: 24
+        },
+        jay: {
+          name: '杰倫',
+          age: 20
+        }
+      },
+      filterArray: [],
+      filterText: ''
+    },
+    methods: {
+        reverseArray: function(){
+            this.arrayData.reverse();
+        },
+        filterData: function(){
+            var vm = this;
+            vm.filterArray = vm.arrayData.filter(function(item){
+                return item.name.match(vm.filterText);
+            });
+        },
+        cantWork: function(){
+            //this.arrayData.length = 0;
+            //this.arrayData[0] = {
+            //    name: '小強',
+            //    age: 99
+            //}
+            Vue.set(this.arrayData, 0,{
+              name: '小強',
+              age: 99
+            })
+        }
+    }
   });

@@ -136,6 +136,15 @@
       </div>
     </div>
 
+    <div id="app-13">
+      <ul>
+        <li v-for="(item, key) in arrayData"  :key="item.age">
+          {{ key }} - {{ item.name }} {{ item.age }} 歲 <input type="text">
+        </li>
+      </ul>
+      <button class="btn btn-outline-primary" @click="reverseArray">反轉陣列</button>
+    </div>
+
 
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
