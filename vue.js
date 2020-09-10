@@ -90,3 +90,59 @@ var demmo = new Vue({
         show: true
     }
 })
+
+var app8 = new Vue({
+    el: '#app-8',
+    data: {
+        text: '<span>Hello World!</span>'
+    }
+})
+
+var app9 = new Vue({
+    el: '#app-9',
+    data: {
+        imgSrc: 'https://images.unsplash.com/photo-1479568933336-ea01829af8de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9926ef56492b20aea8508ed32ec6030&auto=format&fit=crop&w=2250&q=80'
+    }
+})
+
+var app10 = new Vue({
+    el: '#app-10',
+    data: {
+        isTransform: false
+    }
+});
+
+var app11 = new Vue({
+    el: '#app-11',
+    data: {
+        text: '',
+        textarea: '',
+        checkboxArray: [],
+        checkbox1: false,
+        selected: '',
+        singleRadio: ''
+    }
+})
+
+var app12 = new Vue({
+    el: '#app-12',
+    data: {
+      isTransform: false,
+      boxColor: false,
+      objectClass: {
+        'rotate': false,
+        'bg-danger': false,
+      },
+      arrayClass: [],
+      styleObject: {
+        backgroundColor: 'red',
+        borderWidth: '5px'
+      },
+      styleObject2: {
+        boxShadow: '3px 3px 5px rgba(0, 0, 0, 0.16)'
+      },
+      styleObject3: {
+        userSelect: 'none'
+      }
+    },
+  });

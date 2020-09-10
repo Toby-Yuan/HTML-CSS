@@ -50,7 +50,7 @@
         </ol>
     </div>
 
-    <!-- event DOM啟動 -->
+    <!-- event DOM啟動, 可以簡寫成 @click (依照DOM事件名稱) -->
     <div id="app-5">
         <p>{{ message }}</p>
         <button v-on:click="reverseMessage">Reverse Message</button>
@@ -79,6 +79,61 @@
         <transition name="fade">
           <p v-if="show">hello</p>
         </transition>
+    </div>
+
+    <div id="app-8">
+      {{ text }}
+      <input type="text" v-model="text">
+      <div v-html="text"></div>
+    </div>
+
+    <div id="app-9">
+      <img v-bind:src="imgSrc" alt="">
+    </div>
+
+    <!-- 更改class -->
+    <div id="app-10">
+      <div class="box" :class="{ 'rotate' : isTransform }"></div>
+      <button class="btn btn-outline-primary">選轉物件</button>
+    </div>
+
+    <!-- 表單 -->
+    <div id="app-11">
+      {{ text }}
+      <input type="text" v-model="text">
+      {{ textarea }}
+      <textarea v-model="textarea"></textarea>
+      <input type="checkbox" v-model="checkbox1">
+      
+      <input type="checkbox" value="雞肉" v-model="checkboxArray">雞肉
+      <input type="checkbox" value="豬肉" v-model="checkboxArray">豬肉
+      <input type="checkbox" value="牛肉" v-model="checkboxArray">牛肉
+      <p>火鍋裡有<span v-for="item in checkboxArray">{{ item }} </span></p>
+      
+      <input type="radio" value="雞肉" v-model="singleRadio">雞肉
+      <input type="radio" value="豬肉" v-model="singleRadio">豬肉
+      <input type="radio" value="牛肉" v-model="singleRadio">牛肉
+      <p>火鍋裡有 {{ singleRadio }}</p>
+      
+      <select v-model="selected">
+          <option value="">-- 請選擇 --</option>
+          <option value="小明">小明</option>
+          <option value="小美">小美</option>
+      </select>
+    </div>
+
+    <div id="app-12">
+      <h4>陣列寫法</h4>
+      <div class="box" :style="[styleObject,styleObject2]"></div>
+      <button class="btn" :class="arrayClass">請操作本元件</button>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="classToggle3" v-model="arrayClass" value="btn-outline-primary">
+        <label class="form-check-label" for="classToggle3">切換樣式</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="classToggle4" v-model="arrayClass" value="active">
+        <label class="form-check-label" for="classToggle4">啟用元素狀態</label>
+      </div>
     </div>
 
 
